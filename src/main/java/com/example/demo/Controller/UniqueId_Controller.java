@@ -22,7 +22,7 @@ public class UniqueId_Controller {
 @GetMapping("/getnameById")
     public ResponseEntity<String> get_Name_By_Id(@RequestParam("uniqueid") Integer id){
     String response = uniqueId_service.getnamebyid(id);
-    return new ResponseEntity<>("Valid name", HttpStatus.OK);
+    return new ResponseEntity<>(response, HttpStatus.OK);
 }
 
 }
